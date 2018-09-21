@@ -1,0 +1,22 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+       xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id = "usd" name="usd" class = "alex.ru.rate.Usd">
+        <property name = "url" value = "http://www.banki.ru/products/currency/cb/"/>
+    </bean>
+
+    <bean id = "eur" name="eur" class = "alex.ru.rate.Eur">
+        <property name = "url" value = "http://www.banki.ru/products/currency/cb/"/>
+    </bean>
+
+    <bean id = "cny" name="cny" class = "alex.ru.rate.Cny">
+        <property name = "url" value = "http://www.banki.ru/products/currency/cb/"/>
+    </bean>
+
+    <bean id="parser" name="parser" class="alex.ru.rate.RateBankiParser" />
+
+</beans>
